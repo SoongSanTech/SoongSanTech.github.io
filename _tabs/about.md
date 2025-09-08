@@ -4,17 +4,15 @@ icon: fas fa-info-circle
 order: 6
 ---
 
-## SoongSanTech (SIT) 소개
+## About This Website
 
-저희 **SoongSanTech (SIT)**는 인공지능을 활용한 응용 서비스 개발에 주력하는 그룹입니다.
+본 홈페이지는 **SoongSanTech (SIT)**의 연구 개발 과정을 기록하고 관련 정보를 공유하기 위한 목적으로 제작되었습니다.
 
-### 저희의 목표
-> 저희의 궁극적인 목표는 **인공지능을 활용한 응용 서비스를 개발**하는 것입니다.
+### License
+이 사이트의 모든 블로그 게시물은 [크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ko)에 따라 라이선스가 부여됩니다.
 
-### 현재 연구 분야
-> 현재 저희는 **디지털 트윈 환경에서 자율주행 모델을 개발**하는 데 집중하고 있으며, 이후 **Sim-to-Real에 적합한 모델을 연구하고 서비스 개발을 진행**할 계획입니다.
+### Powered by
+이 웹사이트는 [Jekyll](https://jekyllrb.com/)을 기반으로 구축되었으며, [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 테마를 사용하고 있습니다.
 
-이 웹사이트는 저희의 연구 과정과 성과를 기록하고 공유하기 위해 만들어졌습니다.
-
-### 연락처
-문의사항은 [leeroy7321@gmail.com](mailto:leeroy7321@gmail.com)으로 연락주시기 바랍니다.
+### Contact
+웹사이트 관련 문의사항은 [leeroy7321@gmail.com](mailto:leeroy7321@gmail.com)으로 연락주시기 바랍니다.
