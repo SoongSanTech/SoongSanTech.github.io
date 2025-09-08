@@ -16,7 +16,7 @@ timezone:
 
 title: SoongSanTech # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: 디지털 트윈과 AI를 통한 자율주행 모델을 연구하고 개발합니다. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -28,9 +28,6 @@ url: "https://SoongSanTech.github.io"
 github:
   username: SoongSanTech # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
-
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
@@ -38,7 +35,7 @@ social:
   email: leeroy7321@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    - https://instagram.com/meng._.ro # change to your instagram homepage
     - https://github.com/SoongSanTech # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
