@@ -1,4 +1,71 @@
 ---
 layout: home
-# Index page
 ---
+
+<div class="py-5">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-4">Research & Development</h2>
+      </div>
+      {% assign rnd_posts = site.categories.R&D | slice: 0, 3 %}
+      {% if rnd_posts.size > 0 %}
+        {% for post in rnd_posts %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+                <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-secondary">View</a>
+                  </div>
+                  <small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-center">No R&D posts yet. Stay tuned!</p>
+      {% endif %}
+      <div class="col-md-12 text-center">
+        <a href="{{ '/rnd/' | relative_url }}" class="btn btn-primary my-2">View All R&D Posts</a>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-4">Documentation</h2>
+      </div>
+      {% assign docs_posts = site.categories.DOCS | slice: 0, 3 %}
+      {% if docs_posts.size > 0 %}
+        {% for post in docs_posts %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+                <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-secondary">View</a>
+                  </div>
+                  <small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-center">No documentation posts yet. Stay tuned!</p>
+      {% endif %}
+      <div class="col-md-12 text-center">
+        <a href="{{ '/docs/' | relative_url }}" class="btn btn-primary my-2">View All Documentation</a>
+      </div>
+    </div>
+
+  </div>
+</div>
