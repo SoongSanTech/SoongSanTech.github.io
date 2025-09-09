@@ -19,6 +19,6 @@ order: 6
   </p>
   <p>
     <i class="fas fa-envelope fa-fw"></i>
-    <em>웹사이트 관련 문의사항은 <a href="mailto:leeroy7231@gmail.com">leeroy7231@gmail.com</a>으로 연락주시기 바랍니다.</em>
+    <em>문의사항은 <a href="mailto:leeroy7231@gmail.com">leeroy7231@gmail.com</a>으로 연락주시기 바랍니다.</em>
   </p>
 </div>
