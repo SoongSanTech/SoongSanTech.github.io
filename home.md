@@ -1,6 +1,5 @@
 ---
 layout: home
-permalink: /
 ---
 
 <div class="container-fluid">
