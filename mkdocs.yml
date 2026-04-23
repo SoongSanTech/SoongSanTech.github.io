@@ -29,7 +29,7 @@ copyright: >
 theme:
   name: material
   language: ko
-  logo: assets/img/logo/SIT_Group_128x128_removeBG.png
+  logo: assets/img/logo/SIT_Logo_128.png
   favicon: assets/img/favicons/favicon.ico
   custom_dir: overrides
 
@@ -44,9 +44,17 @@ theme:
     view: material/eye
     annotation: material/arrow-right-circle
 
-  # Deep Dive 테마 팔레트: Deep Indigo (#4B0082) + Sky Blue (#00BFFF)
+  # Hybrid Palette: Deep Indigo (#4B0082) + Sky Blue (#00BFFF) / 42dot-style dark default
   # 실제 색상은 docs/assets/stylesheets/extra.css 의 CSS 변수로 오버라이드
   palette:
+    # Dark mode (default — 42dot 스타일)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -55,14 +63,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: 다크 모드로 전환
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-sunny
-        name: 라이트 모드로 전환
 
   features:
     # Navigation
@@ -230,6 +230,7 @@ nav:
       - 프로젝트 개요: wiki/getting-started/project-overview.md
       - 팀 & 자원: wiki/getting-started/team-and-resources.md
       - 개발 환경 셋업: wiki/getting-started/dev-environment.md
+      - 기술 스택 뱃지: wiki/getting-started/tech-badges.md
     - 이론:
       - 자율주행 개요: wiki/theory/autonomous-driving-overview.md
       - 행동 복제(BC): wiki/theory/behavioral-cloning.md

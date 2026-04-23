@@ -14,6 +14,12 @@ authors:
 
 ## 1. 개요 및 목표
 
+<div class="tech-badge-row">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS2">
+  <img src="https://img.shields.io/badge/CARLA-000000?style=for-the-badge" alt="CARLA">
+</div>
+
 자율주행 모델(BC/RL) 학습을 위해서는 고품질의 주행 데이터가 필수적입니다. 이번 Phase 1의 목표는 **CARLA 0.9.15 환경에서 전방 RGB 카메라와 AVM 4대 카메라 데이터를 10Hz 주기로 안정적으로 수집하는 파이프라인을 구축**하는 것이었습니다.
 
 <!-- more -->
