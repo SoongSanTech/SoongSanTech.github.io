@@ -1,25 +1,10 @@
-# MkDocs build output
-site/
-.cache/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-.env
-
-# IDE
-.idea/
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Misc
-*.log
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
 node_modules/
+.DS_Store
+*.log

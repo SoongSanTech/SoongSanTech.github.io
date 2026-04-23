@@ -1,0 +1,35 @@
+---
+layout: default
+title: "R&D 로그"
+---
+
+<div class="hero">
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">R&D LOGS</span>
+    <h1>자율주행 <span class="accent">연구 로그</span></h1>
+    <p class="lead">가설 설정, 실험 결과, 트러블슈팅 등 모든 연구 과정을 시계열로 기록하여 투명하게 공유합니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="cat-filter">
+      <a href="{{ '/rnd/' | relative_url }}" class="is-active">전체 보기</a>
+      <a href="#">Experiment</a>
+      <a href="#">Engineering</a>
+      <a href="#">Milestone</a>
+      <a href="#">Research</a>
+    </div>
+
+    <div class="posts-grid posts-grid--featured">
+      {% assign posts = site.rnd | sort: 'date' | reverse %}
+      {% for post in posts %}
+        {% if forloop.first %}
+          {% include postcard.html post=post featured=true %}
+        {% else %}
+          {% include postcard.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

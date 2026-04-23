@@ -1,0 +1,31 @@
+---
+layout: default
+title: "지식저장소"
+---
+
+<div class="hero">
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">KNOWLEDGE BASE</span>
+    <h1>자율주행 <span class="accent">지식저장소</span></h1>
+    <p class="lead">이론부터 시스템 아키텍처, 기술 스택까지 숭산텍 프로젝트의 핵심 개념을 체계적으로 정리한 정적 문서 모음입니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="cat-filter">
+      <a href="{{ '/knowledge/' | relative_url }}" class="is-active">전체 보기</a>
+      <a href="#">이론 (Theory)</a>
+      <a href="#">기술 스택 (Tech Stack)</a>
+      <a href="#">시스템 아키텍처 (Architecture)</a>
+      <a href="#">시작하기 (Getting Started)</a>
+    </div>
+
+    <div class="posts-grid">
+      {% assign posts = site.knowledge | sort: 'date' | reverse %}
+      {% for post in posts %}
+        {% include postcard.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

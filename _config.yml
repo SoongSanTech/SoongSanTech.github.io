@@ -1,0 +1,86 @@
+# ===== Site =====
+title: "SoongSanTech"
+tagline: "자율주행 R&D 그룹의 지식저장소 & 연구 로그"
+description: "숭산텍(SoongSanTech, SIT)은 CARLA 기반 자율주행 모델과 Sim-to-Real 전이를 연구하는 소규모 R&D 팀입니다."
+url: "https://soongsantech.github.io"
+baseurl: ""
+lang: ko-KR
+timezone: Asia/Seoul
+
+# ===== Branding =====
+brand:
+  short_name: "SIT"
+  long_name: "SoongSanTech"
+  logo: "/assets/img/logo/SIT_Logo_128.png"
+  mark:  "/assets/img/logo/SIT_Mark_512.png"
+  favicon: "/assets/img/favicons/favicon.ico"
+  github_org: "https://github.com/SoongSanTech"
+  flagship_repo: "https://github.com/SoongSanTech/Autonomous-Driving-Planning"
+  email: "leeroy7321@gmail.com"
+  instagram: "https://instagram.com/meng._.ro"
+
+# ===== Navigation tabs (header) =====
+nav:
+  - { title: "소개",       url: "/about/" }
+  - { title: "지식저장소", url: "/knowledge/" }
+  - { title: "R&D 로그",   url: "/rnd/" }
+  - { title: "Contact",    url: "/contact/" }
+
+# ===== Collections =====
+collections:
+  knowledge:
+    output: true
+    permalink: /knowledge/:name/
+  rnd:
+    output: true
+    permalink: /rnd/:year/:month/:name/
+
+# ===== Front-matter defaults =====
+defaults:
+  - scope: { path: "", type: "knowledge" }
+    values:
+      layout: post
+      collection_name: knowledge
+      collection_label: "지식저장소"
+      collection_url: "/knowledge/"
+  - scope: { path: "", type: "rnd" }
+    values:
+      layout: post
+      collection_name: rnd
+      collection_label: "R&D 로그"
+      collection_url: "/rnd/"
+  - scope: { path: "", type: "pages" }
+    values:
+      layout: page
+
+# ===== Plugins =====
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# ===== Build =====
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+
+permalink: /:year/:month/:day/:title/
+excerpt_separator: "<!-- more -->"
+
+exclude:
+  - _backup_mkdocs/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .editorconfig
+  - .gitattributes
+  - .github/
+  - node_modules/
+  - .sass-cache/
