@@ -104,6 +104,30 @@ plugins:
         - ko
         - en
   - tags
+  # 지식저장소 (Knowledge): 이론/기술/아키텍처 관련 지식을 블로그 포스트 형태로 기록
+  - blog:
+      blog_dir: knowledge
+      blog_toc: true
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{categories}/{slug}"
+      post_url_max_categories: 1
+      post_excerpt: required
+      post_excerpt_max_authors: 2
+      archive: true
+      archive_name: 아카이브
+      archive_date_format: yyyy년 MM월
+      categories: true
+      categories_name: 카테고리
+      categories_url_format: "category/{slug}"
+      categories_allowed:
+        - 이론 (Theory)
+        - 기술 스택 (Tech Stack)
+        - 시스템 아키텍처 (Architecture)
+        - 시작하기 (Getting Started)
+      pagination_per_page: 9
+      authors_file: "{blog}/.authors.yml"
+  # R&D 로그: 실험·진행 경과·트러블슈팅·마일스톤 기록
   - blog:
       blog_dir: rnd
       blog_toc: true
@@ -117,7 +141,12 @@ plugins:
       archive_date_format: yyyy년 MM월
       categories: true
       categories_name: 카테고리
-      pagination_per_page: 8
+      categories_allowed:
+        - Experiment
+        - Engineering
+        - Milestone
+        - Research
+      pagination_per_page: 9
       authors_file: "{blog}/.authors.yml"
   - glightbox:
       touchNavigation: true
@@ -224,34 +253,16 @@ extra_css:
 # ─────────────────────────────────────────────────────────────────────────────
 nav:
   - 홈: index.md
-  - 위키:
-    - wiki/index.md
-    - 시작하기:
-      - 프로젝트 개요: wiki/getting-started/project-overview.md
-      - 팀 & 자원: wiki/getting-started/team-and-resources.md
-      - 개발 환경 셋업: wiki/getting-started/dev-environment.md
-      - 기술 스택 뱃지: wiki/getting-started/tech-badges.md
-    - 이론:
-      - 자율주행 개요: wiki/theory/autonomous-driving-overview.md
-      - 행동 복제(BC): wiki/theory/behavioral-cloning.md
-      - 강화학습(PPO): wiki/theory/reinforcement-learning-ppo.md
-      - Sim-to-Real 전이: wiki/theory/sim-to-real.md
-    - 기술 스택:
-      - CARLA 시뮬레이터: wiki/tech-stack/carla-simulator.md
-      - PyTorch & ResNet18: wiki/tech-stack/pytorch-resnet18.md
-      - TensorRT 양자화: wiki/tech-stack/tensorrt-quantization.md
-      - ROS2 Humble: wiki/tech-stack/ros2-humble.md
-    - 시스템 아키텍처:
-      - 데이터 파이프라인: wiki/architecture/data-pipeline.md
-      - 학습 파이프라인: wiki/architecture/training-pipeline.md
-      - 엣지 배포 아키텍처: wiki/architecture/edge-deployment.md
-    - 태그: wiki/tags.md
+  - 소개:
+    - about/index.md
+    - 팀 & 자원: about/team-and-resources.md
+    - 프로젝트 개요: about/project-overview.md
+  - 지식저장소:
+    - knowledge/index.md
   - R&D 로그:
     - rnd/index.md
-  - 기여하기:
-    - contributing/index.md
-    - 위키 작성 가이드: contributing/wiki-guide.md
-    - R&D 로그 작성 가이드: contributing/rnd-guide.md
-    - 작성 템플릿: contributing/templates.md
-    - 워크플로우(Git/PR): contributing/workflow.md
-  - 소개: about.md
+  - Contact:
+    - contact/index.md
+    - 기여하기: contact/contributing.md
+    - 워크플로우(Git/PR): contact/workflow.md
+    - 작성 템플릿: contact/templates.md

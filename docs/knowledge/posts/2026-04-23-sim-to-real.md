@@ -1,8 +1,17 @@
-# Sim-to-Real 전이 (Sim-to-Real Transfer)
+---
+title: "Sim-to-Real 전이 (Sim-to-Real Transfer)"
+date: 2026-04-23
+categories:
+  - 이론 (Theory)
+authors:
+  - sit
+---
 
 ## 1. 개념
 
 **Sim-to-Real Transfer**는 시뮬레이션 환경에서 학습한 정책을 실제 환경(또는 실제 하드웨어)에 적용하는 기법을 말합니다. 시뮬레이션은 데이터 수집 비용·위험·시간을 획기적으로 줄여주지만, 시뮬레이션과 현실 간의 격차(**Reality Gap**)로 인해 직접 전이가 어렵다는 본질적 한계가 있습니다.
+
+<!-- more -->
 
 ## 2. Reality Gap의 주요 원인
 

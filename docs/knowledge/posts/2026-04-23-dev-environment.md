@@ -1,6 +1,15 @@
-# 개발 환경 셋업
+---
+title: "개발 환경 셋업"
+date: 2026-04-23
+categories:
+  - 시작하기 (Getting Started)
+authors:
+  - sit
+---
 
 본 문서는 숭산텍 자율주행 프로젝트(`Autonomous-Driving-Planning`)에 처음 합류하는 팀원이 로컬 개발 환경을 구축하는 절차를 안내합니다.
+
+<!-- more -->
 
 ## 1. 시스템 요구사항
 

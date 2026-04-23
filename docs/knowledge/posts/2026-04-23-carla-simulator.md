@@ -1,8 +1,17 @@
-# CARLA 시뮬레이터
+---
+title: "CARLA 시뮬레이터"
+date: 2026-04-23
+categories:
+  - 기술 스택 (Tech Stack)
+authors:
+  - sit
+---
 
 ## 1. 개요
 
 **CARLA(Car Learning to Act)**는 Unreal Engine 기반의 오픈소스 자율주행 시뮬레이터로, 자율주행 연구의 사실상 표준(de facto standard)입니다. 숭산텍 프로젝트는 **CARLA 0.9.15** 버전을 사용합니다.
+
+<!-- more -->
 
 ## 2. 핵심 특징
 

@@ -2,8 +2,7 @@
 title: "[Phase 1] CARLA 멀티카메라 데이터 수집 파이프라인 구축 완료"
 date: 2026-04-22
 categories:
-  - R&D
-  - Experiments
+  - Experiment
 tags:
   - carla
   - data-pipeline

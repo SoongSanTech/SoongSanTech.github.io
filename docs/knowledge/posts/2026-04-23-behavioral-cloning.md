@@ -1,4 +1,11 @@
-# 행동 복제 (Behavioral Cloning, BC)
+---
+title: "행동 복제 (Behavioral Cloning, BC)"
+date: 2026-04-23
+categories:
+  - 이론 (Theory)
+authors:
+  - sit
+---
 
 ## 1. 개념
 
@@ -7,6 +14,8 @@
 자율주행 맥락에서는 다음과 같이 정의됩니다:
 
 > "전문가(또는 autopilot)의 (관측, 행동) 쌍 데이터셋 $D = \{(o_i, a_i)\}_{i=1}^N$로부터, 관측을 입력받아 행동을 출력하는 정책 $\pi_\theta(a|o)$를 학습한다."
+
+<!-- more -->
 
 ## 2. 학습 목적 함수
 

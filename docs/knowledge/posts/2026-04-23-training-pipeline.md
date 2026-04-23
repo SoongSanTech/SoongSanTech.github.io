@@ -1,8 +1,17 @@
-# 학습 파이프라인 아키텍처
+---
+title: "학습 파이프라인 아키텍처"
+date: 2026-04-23
+categories:
+  - 시스템 아키텍처 (Architecture)
+authors:
+  - sit
+---
 
 ## 1. 개요
 
 숭산텍의 학습 파이프라인은 **BC → RL 2단계**로 구성되며, 각 단계의 산출물(체크포인트)은 SQLite 기반 ExperimentLogger로 추적됩니다.
+
+<!-- more -->
 
 ## 2. 전체 학습 흐름
 

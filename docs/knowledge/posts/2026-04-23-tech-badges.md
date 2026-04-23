@@ -1,13 +1,18 @@
 ---
-title: 기술 스택 뱃지 가이드
+title: "기술 스택 뱃지 가이드"
+date: 2026-04-23
+categories:
+  - 시작하기 (Getting Started)
 tags:
   - Guidelines
   - Badges
+authors:
+  - sit
 ---
 
-# 숭산텍 기술 스택 뱃지 가이드
-
 숭산텍 위키와 R&D 로그 작성 시, 특정 기술 스택을 언급할 때 시각적 가독성을 높이기 위해 **kkram95 뱃지 스타일**을 활용합니다. [kkram95.tistory.com/7](https://kkram95.tistory.com/7)에서 제공하는 `img.shields.io` 포맷을 기반으로 숭산텍의 42dot 하이브리드 테마에 맞게 정리했습니다.
+
+<!-- more -->
 
 ## 핵심 언어 및 프레임워크
 

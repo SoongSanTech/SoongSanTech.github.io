@@ -1,8 +1,17 @@
-# 강화학습 PPO (Proximal Policy Optimization)
+---
+title: "강화학습 PPO (Proximal Policy Optimization)"
+date: 2026-04-23
+categories:
+  - 이론 (Theory)
+authors:
+  - sit
+---
 
 ## 1. 개념
 
 **PPO(Proximal Policy Optimization)**는 OpenAI에서 제안한 정책 경사(Policy Gradient) 계열의 강화학습 알고리즘으로, 학습 안정성과 구현 단순성의 균형이 우수하여 자율주행 연구에서 가장 널리 사용되는 알고리즘 중 하나입니다.
+
+<!-- more -->
 
 ## 2. 핵심 아이디어: Clipped Surrogate Objective
 

@@ -15,7 +15,7 @@ hide:
 숭산텍(SIT)은 소규모 R&D 팀으로서, CARLA 시뮬레이터 기반의 행동복제(BC)와 강화학습(PPO) 파이프라인을 구축하고 엣지 디바이스(Jetson)에서의 실시간 제어 실증을 목표로 합니다. 연구의 모든 과정을 이 공간에 투명하게 기록합니다.
 </p>
 
-<a href="wiki/index.md" class="hero-cta">지식 위키 둘러보기 →</a>
+<a href="knowledge/index.md" class="hero-cta">지식저장소 둘러보기 →</a>
 <a href="rnd/index.md" class="hero-cta secondary">R&D 로그 보기</a>
 
 </div>
@@ -28,7 +28,7 @@ hide:
 
     자율주행, 강화학습, CARLA 시뮬레이터, ROS2 등 프로젝트 관련 핵심 개념과 시스템 아키텍처, 기술 스택 가이드를 체계적으로 정리합니다.
 
-    [:octicons-arrow-right-24: 위키 둘러보기](wiki/index.md)
+    [:octicons-arrow-right-24: 지식저장소 둘러보기](knowledge/index.md)
 
 -   :material-flask:{ .lg .middle } **R&D 로깅 (Blog)**
 
@@ -52,7 +52,7 @@ hide:
 
     팀원들이 쉽게 문서를 작성하고 기여할 수 있도록 표준화된 마크다운 템플릿과 PR 워크플로우를 제공합니다.
 
-    [:octicons-arrow-right-24: 기여 방법 알아보기](contributing/index.md)
+    [:octicons-arrow-right-24: 기여 방법 알아보기](contact/index.md)
 
 </div>
 
@@ -91,7 +91,7 @@ hide:
     <div class="blog-card__body">
       <span class="blog-card__category">Research</span>
       <h4 class="blog-card__title">
-        <a href="wiki/theory/reinforcement-learning-ppo/">BC → PPO 2단계 학습 전략</a>
+        <a href="knowledge/category/이론-(theory)/">BC → PPO 2단계 학습 전략</a>
       </h4>
       <p class="blog-card__excerpt">
         행동복제로 초기 정책을 확보한 뒤 PPO로 미세조정하는 2단계 접근을 코드 수준에서 구현했습니다.
@@ -110,7 +110,7 @@ hide:
     <div class="blog-card__body">
       <span class="blog-card__category">Engineering</span>
       <h4 class="blog-card__title">
-        <a href="wiki/tech-stack/tensorrt-quantization/">TensorRT 양자화로 30Hz 달성하기</a>
+        <a href="knowledge/category/기술-스택-(tech-stack)/">TensorRT 양자화로 30Hz 달성하기</a>
       </h4>
       <p class="blog-card__excerpt">
         FP16/INT8 양자화를 적용해 Jetson Orin에서 ResNet18 기반 모델을 30Hz로 안정 추론합니다.
@@ -129,7 +129,7 @@ hide:
     <div class="blog-card__body">
       <span class="blog-card__category">System</span>
       <h4 class="blog-card__title">
-        <a href="wiki/tech-stack/ros2-humble/">ROS2 Humble 통합 아키텍처</a>
+        <a href="knowledge/category/시스템-아키텍처-(architecture)/">ROS2 Humble 통합 아키텍처</a>
       </h4>
       <p class="blog-card__excerpt">
         센서·인지·계획·제어 노드를 pub-sub 메시지로 연결한 분산 시스템을 구성했습니다.
@@ -145,7 +145,7 @@ hide:
 
 <div class="section-header">
   <h2 class="section-header__title">Research Tags</h2>
-  <a href="wiki/tags/" class="section-header__more">All Tags →</a>
+  <a href="knowledge/아카이브/" class="section-header__more">Knowledge Archive →</a>
 </div>
 
 <div class="tag-cloud">
@@ -185,4 +185,4 @@ hide:
 | **엣지 최적화** | Jetson 환경에서 30Hz 제어를 위한 TensorRT 양자화 (FP16/INT8) |
 | **실증 연구** | 파이프라인 기반 체계적 실험으로 학술적 기여 도출 |
 
-자세한 내용은 [프로젝트 개요](wiki/getting-started/project-overview.md)를 참고하세요.
+자세한 내용은 [프로젝트 개요](about/project-overview.md)를 참고하세요.

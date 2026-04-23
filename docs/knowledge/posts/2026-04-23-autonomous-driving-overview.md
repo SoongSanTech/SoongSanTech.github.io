@@ -1,4 +1,11 @@
-# 자율주행 개요
+---
+title: "자율주행 개요"
+date: 2026-04-23
+categories:
+  - 이론 (Theory)
+authors:
+  - sit
+---
 
 ## 1. 자율주행이란
 
@@ -12,6 +19,8 @@
 | L3 | Conditional Automation | 특정 조건에서 시스템이 주행, 비상시 사람 개입 |
 | L4 | High Automation | 특정 영역(ODD) 내에서 완전 자율 |
 | L5 | Full Automation | 모든 환경에서 완전 자율 |
+
+<!-- more -->
 
 ## 2. 자율주행 시스템의 표준 구성
 

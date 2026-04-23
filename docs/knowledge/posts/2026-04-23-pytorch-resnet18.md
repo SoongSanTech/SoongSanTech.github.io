@@ -1,8 +1,17 @@
-# PyTorch & ResNet18
+---
+title: "PyTorch & ResNet18"
+date: 2026-04-23
+categories:
+  - 기술 스택 (Tech Stack)
+authors:
+  - sit
+---
 
 ## 1. 개요
 
 숭산텍은 딥러닝 프레임워크로 **PyTorch 2.x**를, 그리고 BC/RL 모델의 백본으로 **ResNet18**(ImageNet pretrained)을 채택합니다.
+
+<!-- more -->
 
 ## 2. 왜 ResNet18인가?
 

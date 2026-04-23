@@ -1,8 +1,17 @@
-# TensorRT 양자화
+---
+title: "TensorRT 양자화"
+date: 2026-04-23
+categories:
+  - 기술 스택 (Tech Stack)
+authors:
+  - sit
+---
 
 ## 1. 개요
 
 **TensorRT**는 NVIDIA의 고성능 딥러닝 추론 최적화 SDK입니다. 숭산텍 프로젝트는 Jetson 환경에서 30Hz 추론 주기를 달성하기 위해 PyTorch 모델을 TensorRT 엔진으로 변환합니다.
+
+<!-- more -->
 
 ## 2. 양자화 파이프라인
 
