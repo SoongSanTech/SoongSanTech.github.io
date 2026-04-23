@@ -1,0 +1,42 @@
+name: 📚 위키 문서 요청 / 개선
+description: 새로운 위키 문서가 필요하거나 기존 문서의 개선이 필요할 때
+title: "[Wiki] "
+labels: ["docs", "wiki"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 카테고리
+      description: 어느 카테고리의 문서인가요?
+      options:
+        - Getting Started (시작하기)
+        - Theory (이론)
+        - Tech Stack (기술 스택)
+        - Architecture (아키텍처)
+        - 기타
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: 주제
+      placeholder: "예: PPO 강화학습 이론 정리"
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 왜 이 문서가 필요한가요?
+      description: 배경, 활용 시나리오, 기대 효과를 설명해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: 문서 개요 (선택)
+      description: 다룰 내용의 목차나 키 포인트가 있다면 공유해 주세요.
+  - type: input
+    id: assignee
+    attributes:
+      label: 작성자 (자원자가 있다면)
+      placeholder: "@username"

@@ -1,0 +1,23 @@
+name: 🐞 사이트 버그 / 오타 신고
+description: 깨진 링크, 잘못된 렌더링, 오타 등을 신고할 때
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 문제가 발생한 페이지 URL
+      placeholder: "https://soongsantech.github.io/wiki/..."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 문제 설명
+      description: 무엇이 잘못되었나요? 가능하면 스크린샷을 첨부해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 동작

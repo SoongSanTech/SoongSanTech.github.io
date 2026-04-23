@@ -1,0 +1,38 @@
+name: 🧪 R&D 로그 등록 예정
+description: 진행 중인 실험·트러블슈팅을 R&D 로그로 등록할 예정임을 알릴 때
+title: "[R&D] "
+labels: ["rnd"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 로그 종류
+      options:
+        - Experiment (실험)
+        - Troubleshooting (트러블슈팅)
+        - Milestone (마일스톤 회고)
+        - Design Decision (설계 결정)
+    validations:
+      required: true
+  - type: input
+    id: phase
+    attributes:
+      label: 관련 Phase
+      placeholder: "예: Phase 2-A"
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 가설 또는 목표
+      description: 검증하고자 하는 가설이나 달성 목표
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 실험 환경 (해당 시)
+      description: Git commit, 데이터, 하드웨어, 시드 등
+  - type: input
+    id: target_date
+    attributes:
+      label: 게시 예정일
+      placeholder: "YYYY-MM-DD"

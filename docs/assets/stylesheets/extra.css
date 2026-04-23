@@ -1,0 +1,169 @@
+/* ============================================================================
+   SoongSanTech (SIT) Custom Stylesheet
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* ─── Brand Colors ───────────────────────────────────────────────────────── */
+:root {
+  --md-primary-fg-color: #3F51B5;
+  --md-primary-fg-color--light: #5C6BC0;
+  --md-primary-fg-color--dark: #283593;
+  --md-accent-fg-color: #7C4DFF;
+  --sit-brand-blue: #1A237E;
+  --sit-brand-purple: #7C4DFF;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #5C6BC0;
+  --md-accent-fg-color: #B388FF;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+body, .md-typeset {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.md-typeset code,
+.md-typeset pre {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.5em;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3em;
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+  margin-top: 1.8em;
+}
+
+/* ─── Hero Section (Home Page) ───────────────────────────────────────────── */
+.hero-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1A237E 0%, #7C4DFF 100%);
+  color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  color: #fff !important;
+  font-size: 2.4rem;
+  margin: 0.5rem 0;
+  border: none;
+}
+
+.hero-section p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-section img {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+/* ─── Card Grid ──────────────────────────────────────────────────────────── */
+.grid.cards {
+  margin: 1.5rem 0;
+}
+
+.grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ─── Admonitions ────────────────────────────────────────────────────────── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.5rem;
+  font-size: 0.76rem;
+}
+
+/* ─── Tables ─────────────────────────────────────────────────────────────── */
+.md-typeset table:not([class]) {
+  font-size: 0.74rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ─── Blog (R&D Log) Customization ───────────────────────────────────────── */
+.md-post__authors {
+  margin-bottom: 1rem;
+}
+
+.md-post-action {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+.md-footer-meta__inner {
+  font-size: 0.7rem;
+}
+
+/* ─── Scrollbar (WebKit) ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color);
+}
+
+/* ─── Code Block ─────────────────────────────────────────────────────────── */
+.md-typeset pre > code {
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+/* ─── Phase Badge ────────────────────────────────────────────────────────── */
+.phase-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.phase-badge.phase-1 { background: #4CAF50; color: #fff; }
+.phase-badge.phase-2 { background: #2196F3; color: #fff; }
+.phase-badge.phase-3 { background: #FF9800; color: #fff; }
+.phase-badge.phase-done { background: #9E9E9E; color: #fff; }

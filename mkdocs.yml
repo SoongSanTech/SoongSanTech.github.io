@@ -1,0 +1,253 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Site Information
+# ─────────────────────────────────────────────────────────────────────────────
+site_name: SoongSanTech
+site_url: https://soongsantech.github.io/
+site_author: SoongSanTech (SIT)
+site_description: >-
+  숭산텍(SIT)의 자율주행 연구 지식 위키 및 R&D 로깅 플랫폼.
+  디지털 트윈과 AI를 통한 Sim-to-Real 자율주행 모델을 연구하고 개발합니다.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Repository Information
+# ─────────────────────────────────────────────────────────────────────────────
+repo_name: SoongSanTech/SoongSanTech.github.io
+repo_url: https://github.com/SoongSanTech/SoongSanTech.github.io
+edit_uri: edit/main/docs/
+
+# 빌드에서 제외할 파일
+exclude_docs: |
+  /includes/
+
+copyright: >
+  Copyright &copy; 2024 - 2026 SoongSanTech (SIT) ·
+  <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC BY 4.0</a>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Theme Configuration
+# ─────────────────────────────────────────────────────────────────────────────
+theme:
+  name: material
+  language: ko
+  logo: assets/img/logo/SIT_Group_128x128_removeBG.png
+  favicon: assets/img/favicons/favicon.ico
+  custom_dir: overrides
+
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    annotation: material/arrow-right-circle
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    # TOC
+    - toc.follow
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Header
+    - header.autohide
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+    # Announcement
+    - announce.dismiss
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Plugins
+# ─────────────────────────────────────────────────────────────────────────────
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+  - tags
+  - blog:
+      blog_dir: rnd
+      blog_toc: true
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      post_excerpt: required
+      post_excerpt_max_authors: 2
+      archive: true
+      archive_name: 아카이브
+      archive_date_format: yyyy년 MM월
+      categories: true
+      categories_name: 카테고리
+      pagination_per_page: 8
+      authors_file: "{blog}/.authors.yml"
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      timezone: Asia/Seoul
+      locale: ko
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Markdown Extensions
+# ─────────────────────────────────────────────────────────────────────────────
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - tables
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Extra Configuration (Mermaid, Math, Social)
+# ─────────────────────────────────────────────────────────────────────────────
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SoongSanTech
+      name: SoongSanTech GitHub
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/meng._.ro
+      name: Instagram
+    - icon: fontawesome/solid/envelope
+      link: mailto:leeroy7321@gmail.com
+      name: 이메일 문의
+
+  generator: false
+
+  status:
+    new: 최근 추가
+    deprecated: 더 이상 권장되지 않음
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Navigation Structure
+# ─────────────────────────────────────────────────────────────────────────────
+nav:
+  - 홈: index.md
+  - 위키:
+    - wiki/index.md
+    - 시작하기:
+      - 프로젝트 개요: wiki/getting-started/project-overview.md
+      - 팀 & 자원: wiki/getting-started/team-and-resources.md
+      - 개발 환경 셋업: wiki/getting-started/dev-environment.md
+    - 이론:
+      - 자율주행 개요: wiki/theory/autonomous-driving-overview.md
+      - 행동 복제(BC): wiki/theory/behavioral-cloning.md
+      - 강화학습(PPO): wiki/theory/reinforcement-learning-ppo.md
+      - Sim-to-Real 전이: wiki/theory/sim-to-real.md
+    - 기술 스택:
+      - CARLA 시뮬레이터: wiki/tech-stack/carla-simulator.md
+      - PyTorch & ResNet18: wiki/tech-stack/pytorch-resnet18.md
+      - TensorRT 양자화: wiki/tech-stack/tensorrt-quantization.md
+      - ROS2 Humble: wiki/tech-stack/ros2-humble.md
+    - 시스템 아키텍처:
+      - 데이터 파이프라인: wiki/architecture/data-pipeline.md
+      - 학습 파이프라인: wiki/architecture/training-pipeline.md
+      - 엣지 배포 아키텍처: wiki/architecture/edge-deployment.md
+    - 태그: wiki/tags.md
+  - R&D 로그:
+    - rnd/index.md
+  - 기여하기:
+    - contributing/index.md
+    - 위키 작성 가이드: contributing/wiki-guide.md
+    - R&D 로그 작성 가이드: contributing/rnd-guide.md
+    - 작성 템플릿: contributing/templates.md
+    - 워크플로우(Git/PR): contributing/workflow.md
+  - 소개: about.md

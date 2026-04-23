@@ -1,28 +1,25 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
+# MkDocs build output
+site/
+.cache/
 
-# Jekyll cache
-.jekyll-cache
-.jekyll-metadata
-_site
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
 
-# RubyGems
-*.gem
-
-# NPM dependencies
-node_modules
-package-lock.json
-
-# IDE configurations
-.idea
+# IDE
+.idea/
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
-!.vscode/tasks.json
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Misc
-_sass/vendors
-assets/js/dist
-chat_room.txt
+*.log
+node_modules/
