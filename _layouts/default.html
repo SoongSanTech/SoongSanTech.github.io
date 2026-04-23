@@ -20,8 +20,20 @@
 
   {% feed_meta %}
   {% seo %}
+
+  <script>
+    // Prevent flash of wrong theme: read stored preference synchronously
+    (function(){
+      try {
+        var t = localStorage.getItem('sit-theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch(e){}
+    })();
+  </script>
 </head>
-<body class="theme-dark">
+<body>
   {% include header.html %}
 
   <main class="site-main">
