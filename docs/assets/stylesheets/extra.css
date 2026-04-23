@@ -1,122 +1,334 @@
 /* ============================================================================
-   SoongSanTech (SIT) Custom Stylesheet
+   SoongSanTech (SIT) — "Deep Dive" Theme
+   Palette: Deep Indigo (#4B0082) + Sky Blue (#00BFFF)
+   Style:   Flat (no shadow / no gradient on UI), Generous spacing
    ============================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
 
-/* ─── Brand Colors ───────────────────────────────────────────────────────── */
+/* ─── Brand Tokens ───────────────────────────────────────────────────────── */
 :root {
-  --md-primary-fg-color: #3F51B5;
-  --md-primary-fg-color--light: #5C6BC0;
-  --md-primary-fg-color--dark: #283593;
-  --md-accent-fg-color: #7C4DFF;
-  --sit-brand-blue: #1A237E;
-  --sit-brand-purple: #7C4DFF;
+  /* Deep Dive Palette */
+  --sit-deep-indigo: #4B0082;
+  --sit-deep-indigo-dark: #36005E;
+  --sit-deep-indigo-light: #6A1FB1;
+  --sit-sky-blue: #00BFFF;
+  --sit-sky-blue-dark: #0099CC;
+  --sit-light-gray: #F5F7FA;
+  --sit-dark-gray: #1F2937;
+  --sit-text-secondary: rgba(31, 41, 55, 0.65);
+
+  /* Material primary/accent override (custom palette mapping) */
+  --md-primary-fg-color: var(--sit-deep-indigo);
+  --md-primary-fg-color--light: var(--sit-deep-indigo-light);
+  --md-primary-fg-color--dark: var(--sit-deep-indigo-dark);
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+
+  --md-accent-fg-color: var(--sit-sky-blue);
+  --md-accent-fg-color--transparent: rgba(0, 191, 255, 0.1);
+  --md-accent-bg-color: #FFFFFF;
+
+  --md-typeset-a-color: var(--sit-deep-indigo);
+  --md-default-fg-color: var(--sit-dark-gray);
+  --md-default-bg-color: #FFFFFF;
+  --md-code-bg-color: var(--sit-light-gray);
 }
 
+/* Dark mode tokens */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #5C6BC0;
-  --md-accent-fg-color: #B388FF;
+  --md-primary-fg-color: #7C4DFF;
+  --md-primary-fg-color--light: #B388FF;
+  --md-primary-fg-color--dark: #4B0082;
+  --md-accent-fg-color: var(--sit-sky-blue);
+  --md-accent-fg-color--transparent: rgba(0, 191, 255, 0.15);
+  --md-typeset-a-color: var(--sit-sky-blue);
+  --md-code-bg-color: #0F1419;
+  --md-default-bg-color: #0B0F19;
 }
 
 /* ─── Typography ─────────────────────────────────────────────────────────── */
 body, .md-typeset {
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.78rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv11";
 }
 
 .md-typeset code,
-.md-typeset pre {
+.md-typeset pre,
+kbd {
   font-family: 'JetBrains Mono', 'Consolas', monospace;
 }
 
 .md-typeset h1 {
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  color: var(--sit-deep-indigo);
 }
 
 .md-typeset h2 {
   font-weight: 700;
-  letter-spacing: -0.01em;
-  margin-top: 2.5em;
-  border-bottom: 2px solid var(--md-default-fg-color--lightest);
-  padding-bottom: 0.3em;
+  letter-spacing: -0.015em;
+  margin-top: 2.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--sit-light-gray);
+  color: var(--sit-deep-indigo);
 }
 
 .md-typeset h3 {
+  font-weight: 600;
+  margin-top: 2em;
+  color: var(--sit-dark-gray);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: #B388FF;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Header (Top Bar) ───────────────────────────────────────────────────── */
+.md-header {
+  background-color: var(--sit-deep-indigo);
+  color: #FFFFFF;
+  box-shadow: none;
+  border-bottom: 3px solid var(--sit-sky-blue);
+}
+
+.md-header__title {
+  font-weight: 600;
+}
+
+.md-tabs {
+  background-color: var(--sit-deep-indigo);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-tabs__link {
   font-weight: 500;
-  margin-top: 1.8em;
+  opacity: 0.85;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 1;
+  color: var(--sit-sky-blue);
+}
+
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 0.4rem;
+}
+
+.md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ─── Left Accent Bar (Deep Dive Signature) ─────────────────────────────── */
+.md-main {
+  position: relative;
+}
+
+.md-main::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--sit-deep-indigo);
+  z-index: 100;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 76.234375em) {
+  .md-main::before { display: none; }
 }
 
 /* ─── Hero Section (Home Page) ───────────────────────────────────────────── */
 .hero-section {
-  padding: 3rem 1rem;
-  text-align: center;
-  background: linear-gradient(135deg, #1A237E 0%, #7C4DFF 100%);
+  position: relative;
+  padding: 4rem 2.5rem 3rem;
+  text-align: left;
+  background: var(--sit-deep-indigo);
   color: #fff;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+  border-radius: 0;
+  margin: -1.5rem -0.8rem 2.5rem;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  background: var(--sit-sky-blue);
 }
 
 .hero-section h1 {
   color: #fff !important;
-  font-size: 2.4rem;
-  margin: 0.5rem 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0.5rem 0 1rem;
   border: none;
 }
 
 .hero-section p {
   font-size: 1.05rem;
-  opacity: 0.95;
-  max-width: 720px;
-  margin: 0 auto;
+  opacity: 0.9;
+  max-width: 760px;
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
 }
 
 .hero-section img {
-  max-width: 180px;
-  margin-bottom: 1rem;
+  max-width: 96px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
 }
 
 /* ─── Card Grid ──────────────────────────────────────────────────────────── */
 .grid.cards {
-  margin: 1.5rem 0;
+  margin: 1.8rem 0;
+}
+
+.grid.cards > ul {
+  gap: 1rem;
 }
 
 .grid.cards > ul > li {
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.6rem;
-  padding: 1.2rem;
-  transition: all 0.2s ease;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+  border-left: 4px solid var(--sit-deep-indigo);
+  border-radius: 0.3rem;
+  padding: 1.4rem 1.4rem 1.2rem;
+  background: #FFFFFF;
+  transition: border-left-color 0.18s ease, transform 0.18s ease;
+  box-shadow: none;
 }
 
 .grid.cards > ul > li:hover {
-  border-color: var(--md-primary-fg-color);
-  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.15);
-  transform: translateY(-2px);
+  border-left-color: var(--sit-sky-blue);
+  transform: translateX(2px);
 }
 
-/* ─── Admonitions ────────────────────────────────────────────────────────── */
+[data-md-color-scheme="slate"] .grid.cards > ul > li {
+  background: #131826;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-left-color: #7C4DFF;
+}
+
+/* ─── Custom Bullet (Sky Blue Square) ────────────────────────────────────── */
+.md-typeset .md-content__inner ul:not(.task-list) li::marker {
+  color: var(--sit-sky-blue);
+  font-weight: 700;
+}
+
+/* ─── Admonitions (Flat) ─────────────────────────────────────────────────── */
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
+  border-left-width: 4px;
   font-size: 0.76rem;
+  box-shadow: none;
 }
 
-/* ─── Tables ─────────────────────────────────────────────────────────────── */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left-color: var(--sit-deep-indigo);
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left-color: var(--sit-sky-blue);
+}
+
+/* ─── Tables (Flat, Indigo Header) ───────────────────────────────────────── */
 .md-typeset table:not([class]) {
   font-size: 0.74rem;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   overflow: hidden;
+  box-shadow: none;
+  border: 1px solid var(--sit-light-gray);
 }
 
 .md-typeset table:not([class]) th {
-  background: var(--md-primary-fg-color);
+  background: var(--sit-deep-indigo);
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-/* ─── Blog (R&D Log) Customization ───────────────────────────────────────── */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: #2D1B3D;
+}
+
+/* ─── Code Block (Deep Dive Style) ───────────────────────────────────────── */
+.md-typeset pre > code {
+  font-size: 0.74rem;
+  line-height: 1.55;
+  background: var(--sit-dark-gray) !important;
+  color: #E5E7EB !important;
+  border-left: 4px solid var(--sit-sky-blue);
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.md-typeset .highlight {
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.md-typeset code {
+  background: var(--sit-light-gray);
+  padding: 0.1em 0.4em;
+  border-radius: 0.2rem;
+  font-size: 0.85em;
+  color: var(--sit-deep-indigo);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: rgba(124, 77, 255, 0.15);
+  color: #B388FF;
+}
+
+/* ─── Sidebar (Navigation) ───────────────────────────────────────────────── */
+.md-nav__title {
+  color: var(--sit-deep-indigo);
+  font-weight: 700;
+}
+
+.md-nav__link--active,
+.md-nav__link[for]:focus,
+.md-nav__link[for]:hover,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--sit-sky-blue);
+}
+
+[data-md-color-scheme="slate"] .md-nav__title {
+  color: #B388FF;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--sit-dark-gray);
+}
+
+.md-footer-meta {
+  background-color: #0F1115;
+}
+
+.md-footer-meta__inner {
+  font-size: 0.7rem;
+}
+
+/* ─── Blog (R&D) Customization ───────────────────────────────────────────── */
 .md-post__authors {
   margin-bottom: 1rem;
 }
@@ -124,46 +336,81 @@ body, .md-typeset {
 .md-post-action {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 1px solid var(--sit-light-gray);
 }
 
-/* ─── Footer ─────────────────────────────────────────────────────────────── */
-.md-footer-meta__inner {
-  font-size: 0.7rem;
+.md-post .md-post__header {
+  border-left: 4px solid var(--sit-sky-blue);
+  padding-left: 1rem;
 }
 
-/* ─── Scrollbar (WebKit) ─────────────────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* ─── Buttons ────────────────────────────────────────────────────────────── */
+.md-button {
+  background-color: var(--sit-deep-indigo);
+  color: #FFFFFF !important;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  padding: 0.6em 1.2em;
+  transition: background-color 0.15s ease;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--md-default-fg-color--lighter);
-  border-radius: 4px;
+.md-button:hover,
+.md-button:focus {
+  background-color: var(--sit-sky-blue);
+  color: #FFFFFF !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--md-primary-fg-color);
+.md-button--primary {
+  background-color: var(--sit-sky-blue);
 }
 
-/* ─── Code Block ─────────────────────────────────────────────────────────── */
-.md-typeset pre > code {
-  font-size: 0.74rem;
-  line-height: 1.5;
+.md-button--primary:hover {
+  background-color: var(--sit-deep-indigo);
 }
 
-/* ─── Phase Badge ────────────────────────────────────────────────────────── */
+/* ─── Phase / Status Badge ───────────────────────────────────────────────── */
 .phase-badge {
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-size: 0.7rem;
   font-weight: 700;
   margin-right: 0.4rem;
+  letter-spacing: 0.02em;
 }
 
-.phase-badge.phase-1 { background: #4CAF50; color: #fff; }
-.phase-badge.phase-2 { background: #2196F3; color: #fff; }
-.phase-badge.phase-3 { background: #FF9800; color: #fff; }
+.phase-badge.phase-1 { background: var(--sit-sky-blue); color: var(--sit-dark-gray); }
+.phase-badge.phase-2 { background: var(--sit-deep-indigo); color: #fff; }
+.phase-badge.phase-3 { background: var(--sit-deep-indigo-light); color: #fff; }
 .phase-badge.phase-done { background: #9E9E9E; color: #fff; }
+
+/* ─── Scrollbar (WebKit) ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 0, 130, 0.25);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sit-deep-indigo);
+}
+
+/* ─── Whitespace (Generous Spacing per Deep Dive guide) ──────────────────── */
+.md-content__inner {
+  padding: 1.4rem 1.4rem;
+}
+
+.md-typeset p {
+  margin: 0.9em 0;
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--sit-sky-blue);
+  color: var(--sit-dark-gray);
+}
